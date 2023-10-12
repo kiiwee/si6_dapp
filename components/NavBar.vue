@@ -1,24 +1,32 @@
 <template>
     <div>
         <div class="navbar bg-primary rounded-xl text-secondary">
-            <div class="flex-1">
-                <p class="btn btn-ghost text-bold text-4xl">SI6 Supply chain ecosystem project</p>
-            </div>
+            <NuxtLink to="/" class="flex-1">
+                <p class="btn btn-ghost text-bold text-4xl">SI6 project</p>
+            </NuxtLink>
+            <NuxtLink to="/test">
+                Test View </NuxtLink>
             <div class="flex-none">
                 <ul class="menu menu-horizontal px-1">
-                    <li><a>Link</a></li>
-                    <li><a>Link</a></li>
-                    <li><a>Link</a></li>
+
 
                     <li>
                         <details>
                             <summary>
-                                Parent
+                                Assets
                             </summary>
-                            <ul class="p-2 bg-base-100">
-                                <li><a>Link 1</a></li>
-                                <li><a>Link 2</a></li>
-                            </ul>
+                            <NuxtLink to="/asset/1">
+                                Asset 1
+                            </NuxtLink>
+                            <NuxtLink to="/asset/3">
+                                Asset 2
+                            </NuxtLink>
+                            <NuxtLink to="/asset/4">
+                                Asset 3
+                            </NuxtLink>
+                            <NuxtLink to="/asset/5">
+                                Asset 4
+                            </NuxtLink>
                         </details>
                     </li>
 

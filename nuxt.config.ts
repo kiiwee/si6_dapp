@@ -1,19 +1,24 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import { nodePolyfills } from "vite-plugin-node-polyfills";
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  runtimeConfig: {
+    public: {
+      KEY_INF: process.env.INFURA_API_KEY_SECRET,
+      SECRET_INF: process.env.INFURA_API_KEY
+    },
+  },
+  routes: { '/': { prerender: true }, '/*': { cors: false } },
   modules: [
     "@nuxtjs/tailwindcss",
-    '@vueuse/nuxt',
-    '@use-wagmi/nuxt',
-    '@pinia/nuxt'
+    '@pinia/nuxt',
+
   ],
+
   vite: {
     resolve: {
       alias: {
         process: 'process/browser',
-        util: 'util',
       },
     },
 
