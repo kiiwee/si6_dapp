@@ -33,9 +33,9 @@ const qrtext = ref('')
 </script>
 <template>
     <div>
-        <input v-model="qrtext" type="text" placeholder="Type here" class="input w-full max-w-xs" />
+        <!-- <input v-model="qrtext" type="text" placeholder="Type here" class="input w-full max-w-xs" />
 
-        <qrcode-vue :value="qrtext"></qrcode-vue>
+        <qrcode-vue :value="qrtext"></qrcode-vue> -->
 
         {{ nft.metadata }}
 
@@ -48,6 +48,8 @@ const qrtext = ref('')
                     <h2 v-if="nft.metadata.size">Size: {{ nft.metadata.size }}</h2>
                     <h2 v-if="nft.metadata.size_h">Size Height: {{ nft.metadata.size_h }}</h2>
                     <h2 v-if="nft.metadata.size_w">Size Width: {{ nft.metadata.size_w }}</h2>
+                    <h2 v-if="nft.metadata.properties">Supplier 1: {{ nft.metadata.properties.supplier1 }}</h2>
+                    <h2 v-if="nft.metadata.properties">Supplier 2: {{ nft.metadata.properties.supplier2 }}</h2>
                 </div>
                 <figure><img src="/dummy.avif" alt="Shoes" /></figure>
             </div>

@@ -4,8 +4,12 @@
             <NuxtLink to="/" class="flex-1">
                 <p class="btn btn-ghost text-bold text-4xl">SI6 project</p>
             </NuxtLink>
-            <NuxtLink to="/test">
+            <NuxtLink to="/test" class="m-5">
                 Test View </NuxtLink>
+            <NuxtLink to="/add_asset" class="m-5">
+                Mint Assets </NuxtLink>
+            <NuxtLink to="/preview" class="m-5">
+                Preview Assets </NuxtLink>
             <div class="flex-none">
                 <ul class="menu menu-horizontal px-1">
 

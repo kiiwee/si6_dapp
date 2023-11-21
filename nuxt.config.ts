@@ -1,6 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
 export default defineNuxtConfig({
+  // ssr: true,
+
   devtools: { enabled: true },
   runtimeConfig: {
     public: {
@@ -8,13 +10,12 @@ export default defineNuxtConfig({
       SECRET_INF: process.env.INFURA_API_KEY
     },
   },
-  routes: { '/': { prerender: true }, '/*': { cors: false } },
   modules: [
     "@nuxtjs/tailwindcss",
     '@pinia/nuxt',
 
   ],
-
+  // routeRules: { '/web/v1/**': { proxy: { to: "http://localhost:3000/web/v1/**", }, } },
   vite: {
     resolve: {
       alias: {
